@@ -5,12 +5,23 @@
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>dokuz studio</title>
+  <title>Dokuz Studio</title>
   <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 </head>
 
 <body>
 
+
+  <!-- Nav Bar -->
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="#home" class="nav-item">HOME</a>
+      <a href="#about" class="nav-item">ABOUT ME</a>
+      <a href="#services" class="nav-item">SERVICES</a>
+      <a href="#contact" class="nav-item">CONTACT ME</a>
+    </div>
+  </nav>
 
   <!-- giris -->
   <div class="head1" id="home">
@@ -150,46 +161,46 @@
 
     <div class="tilted-wrapper">
       <div class="tilted-gallery">
-        <img src="img/1.jpg" class="img-box">
-        <img src="img/2.jpg" class="img-box">
-        <img src="img/3.jpg" class="img-box">
-        <img src="img/4.jpg" class="img-box">
-        <img src="img/5.jpg" class="img-box">
-        <img src="img/6.jpg" class="img-box">
-        <img src="img/7.jpg" class="img-box">
-        <img src="img/8.jpg" class="img-box">
+        <img src="img/1.png" class="img-box">
+        <img src="img/2.png" class="img-box">
+        <img src="img/3.png" class="img-box">
+        <img src="img/4.png" class="img-box">
+        <img src="img/5.png" class="img-box">
+        <img src="img/6.png" class="img-box">
+        <img src="img/7.png" class="img-box">
+        <img src="img/8.png" class="img-box">
         <!-- dongu -->
-        <img src="img/1.jpg" class="img-box">
-        <img src="img/2.jpg" class="img-box">
-        <img src="img/3.jpg" class="img-box">
-        <img src="img/4.jpg" class="img-box">
-        <img src="img/5.jpg" class="img-box">
-        <img src="img/6.jpg" class="img-box">
-        <img src="img/7.jpg" class="img-box">
-        <img src="img/8.jpg" class="img-box">
+        <img src="img/1.png" class="img-box">
+        <img src="img/2.png" class="img-box">
+        <img src="img/3.png" class="img-box">
+        <img src="img/4.png" class="img-box">
+        <img src="img/5.png" class="img-box">
+        <img src="img/6.png" class="img-box">
+        <img src="img/7.png" class="img-box">
+        <img src="img/8.png" class="img-box">
       </div>
     </div>
 
 
     <div class="tilted-wrapper2">
       <div class="tilted-gallery2">
-        <img src="img/1.jpg" class="img-box">
-        <img src="img/2.jpg" class="img-box">
-        <img src="img/3.jpg" class="img-box">
-        <img src="img/4.jpg" class="img-box">
-        <img src="img/5.jpg" class="img-box">
-        <img src="img/6.jpg" class="img-box">
-        <img src="img/7.jpg" class="img-box">
-        <img src="img/8.jpg" class="img-box">
+        <img src="img/1.png" class="img-box">
+        <img src="img/2.png" class="img-box">
+        <img src="img/3.png" class="img-box">
+        <img src="img/4.png" class="img-box">
+        <img src="img/5.png" class="img-box">
+        <img src="img/6.png" class="img-box">
+        <img src="img/7.png" class="img-box">
+        <img src="img/8.png" class="img-box">
         <!-- dongu -->
-        <img src="img/1.jpg" class="img-box">
-        <img src="img/2.jpg" class="img-box">
-        <img src="img/3.jpg" class="img-box">
-        <img src="img/4.jpg" class="img-box">
-        <img src="img/5.jpg" class="img-box">
-        <img src="img/6.jpg" class="img-box">
-        <img src="img/7.jpg" class="img-box">
-        <img src="img/8.jpg" class="img-box">
+        <img src="img/1.png" class="img-box">
+        <img src="img/2.png" class="img-box">
+        <img src="img/3.png" class="img-box">
+        <img src="img/4.png" class="img-box">
+        <img src="img/5.png" class="img-box">
+        <img src="img/6.png" class="img-box">
+        <img src="img/7.png" class="img-box">
+        <img src="img/8.png" class="img-box">
       </div>
     </div>
 
@@ -420,6 +431,15 @@
     }
 
     requestAnimationFrame(raf);
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('.nav-item').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        lenis.scrollTo(targetId);
+      });
+    });
   </script>
 
 
